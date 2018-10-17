@@ -1,1 +1,6 @@
+# uitleg powerscript
 
+Rename-computer -newname DC1  
+New-NetIPAddress -InterfaceAlias "Ethernet 2" -IPAddress "192.168.1.1" -AddressFamily IPv4 -PrefixLength 24
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+Install-ADDSForest -DomainName ROBDEC.gent
