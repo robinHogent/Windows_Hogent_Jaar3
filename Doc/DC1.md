@@ -13,4 +13,7 @@ De rollen voor AD te installeren gaat als het volgend.
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Install-ADDSForest -DomainName name.loc -SafeModeAdministratorPassword "wachtwoord"
 ```
-**Note** merk op dat er hierbij ook een domain wordt aangemaak door *-DomainName* daarbij word er ook een SafeModeAdministratorPassword meegeven deze is voor het aanmelden van het domain , dit doe je via *-SafeModeAdministratorPassword*
+**Note** merk op dat er hierbij ook een domain wordt aangemaak door  
+*-DomainName*  
+daarbij word er ook een SafeModeAdministratorPassword meegeven deze is voor het aanmelden van het domain , dit doe je via  
+*-SafeModeAdministratorPassword*
