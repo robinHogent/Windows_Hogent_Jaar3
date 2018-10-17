@@ -40,4 +40,5 @@ get-eventlog "Active Directory Web Services" | select entrytype, source, eventid
 # Bronnnen
 
 https://blogs.technet.microsoft.com/chadcox/2016/10/25/chads-quick-notes-installing-a-domain-controller-with-server-2016-core/  
-https://docs.microsoft.com/nl-nl/windows-server/networking/technologies/dhcp/dhcp-deploy-wps
+https://docs.microsoft.com/nl-nl/windows-server/networking/technologies/dhcp/dhcp-deploy-wps  
+https://www.reddit.com/r/PowerShell/comments/8fr0l8/how_do_i_convert_to_systemsecuritysecurestring/
