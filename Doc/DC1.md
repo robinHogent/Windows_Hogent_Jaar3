@@ -43,3 +43,5 @@ https://blogs.technet.microsoft.com/chadcox/2016/10/25/chads-quick-notes-install
 https://docs.microsoft.com/nl-nl/windows-server/networking/technologies/dhcp/dhcp-deploy-wps  
 https://www.reddit.com/r/PowerShell/comments/8fr0l8/how_do_i_convert_to_systemsecuritysecurestring/  
 https://www.faqforge.com/windows/configure-dhcp-powershell/  
+
+https://mikefrobbins.com/2013/03/14/use-powershell-to-add-an-additional-domain-controller-to-an-existing-windows-server-2012-active-directory-domain/
