@@ -1,4 +1,4 @@
-# uitleg powerscript
+# Uitleg powerscript
 
 Als we beginnen met het maken van een DC is het belangrijk om de computernaam aantepassen dit doe je via
 ```
@@ -17,3 +17,21 @@ Install-ADDSForest -DomainName name.loc -SafeModeAdministratorPassword "wachtwoo
 *-DomainName*  
 daarbij word er ook een SafeModeAdministratorPassword meegeven deze is voor het aanmelden van het domain , dit doe je via  
 *-SafeModeAdministratorPassword*
+
+## Testen
+
+om te testen of dit werken moeten we in de eerste plaats contoleren of de services van adws,kdc,netlogon,dns werken.  
+Dit kunnen we zien door het commando.
+```
+Get-Service adws,kdc,netlogon,dns
+```
+Als alle deze services op running staan. is er geen probleem.  
+Daarbij is een controle op de sysvol en de netlogon ook van belang, bekijk de output van de het commando
+```
+Get-smbshare
+```
+Moest je toch meer informatie wensen over wat er allemaal is gebreurd kan je steeds kijken naar de Review logs via
+```
+get-eventlog "Directory Service" | select entrytype, source, eventid, message
+get-eventlog "Active Directory Web Services" | select entrytype, source, eventid, messag
+```
