@@ -37,4 +37,6 @@ get-eventlog "Directory Service" | select entrytype, source, eventid, message
 get-eventlog "Active Directory Web Services" | select entrytype, source, eventid, messag
 ```
 
+# Bronnnen
 
+https://blogs.technet.microsoft.com/chadcox/2016/10/25/chads-quick-notes-installing-a-domain-controller-with-server-2016-core/
