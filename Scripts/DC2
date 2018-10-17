@@ -1,5 +1,5 @@
 Rename-computer -newname DC2   
 New-NetIPAddress -InterfaceAlias "Ethernet 2" -IPAddress "192.168.1.2" -AddressFamily IPv4 -PrefixLength 24
-Add-WindowsFeature AD-Domain-Services
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddresses "192.168.1.1"
 Install-ADDSDomainController -CreateDnsDelegation:$false -DatabasePath 'C:\Windows\NTDS' (ConvertTo-SecureString -String  -DomainName 'ROBDEC.gent' -AsPlainText -Force) 
