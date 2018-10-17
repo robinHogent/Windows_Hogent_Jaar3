@@ -1,0 +1,4 @@
+Rename-computer -newname DC2   
+New-NetIPAddress -InterfaceAlias "Ethernet 2" -IPAddress "192.168.1.1" -AddressFamily IPv4 -PrefixLength 24
+Add-WindowsFeature AD-Domain-Services
+Install-ADDSDomainController -CreateDnsDelegation:$false -DatabasePath 'C:\Windows\NTDS' (ConvertTo-SecureString -String  -DomainName 'ROBDEC.gent' -AsPlainText -Force) 
