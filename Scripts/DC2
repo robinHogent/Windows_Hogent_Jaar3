@@ -6,7 +6,7 @@ Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Install-ADDSDomainController
 -CreateDnsDelegation:$false
 -DatabasePath 'C:\Windows\NTDS'
--Credential (Get-Credential ROBDEC\Administrator)
+-Credential New-Object System.Management.Automation.PSCredential ("ROBDEC\Administrator", (ConvertTo-SecureString "Robin1" -AsPlainText -force))
 -DomainName 'ROBDEC.gent'
 -SafeModeAdministratorPassword (ConvertTo-SecureString -String "Robin1TisTeKort#MyLife" -AsPlainText -Force)  
 
