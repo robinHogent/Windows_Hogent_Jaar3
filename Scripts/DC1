@@ -1,9 +1,11 @@
 Rename-computer -newname DC1  
-New-NetIPAddress -InterfaceAlias "Ethernet 2" -IPAddress "192.168.1.1" -AddressFamily IPv4 -PrefixLength 24
+New-NetIPAddress -InterfaceAlias "Ethernet 2" -IPAddress "192.168.1.1" -AddressFamily IPv4 -PrefixLength 24 -DefaultGateWay 192.2.1.1
+Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddresses "192.2.1.1"
+Restart-Computer -f
+
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Install-ADDSForest -DomainName ROBDEC.gent -SafeModeAdministratorPassword (ConvertTo-SecureString -String "Robin1" -AsPlainText -Force)
 Install-WindowsFeature DNS -IncludeManagementTools
-Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddresses "172.0.0.1"
 Install-WindowsFeature DHCP -IncludeManagementTools  
 Add-DhcpServerV4Scope -Name "DHCP Scope" -StartRange 192.168.1.50 -EndRange 192.168.1.100 -SubnetMask 255.255.255.0  
 Set-DhcpServerV4OptionValue -DnsServer 192.168.1.1 -Router 192.168.1.1  
