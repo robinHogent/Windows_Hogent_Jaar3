@@ -12,5 +12,5 @@ Set-DhcpServerV4OptionValue -DnsServer 192.168.1.1 -Router 192.168.1.1
 #Set-DhcpServerv4Scope -ScopeId 192.168.1.1 -LeaseDuration 1.00:00:00  
 
 #make authoritative
-Add-DhcpServerInDc
+Add-DhcpServerInDc -DnsName dc01.mort.lab -IPAddress $ip
 Restart-service dhcpserver  
