@@ -15,7 +15,7 @@ Add-Computer -DomainName $domain -Credential $credential
 Restart-Computer
 
 
-$sqlAdminUser = "ROBEGG\Administrator"
+$sqlAdminUser = "ROBDEC\Administrator"
 $execdir = (get-location).Drive.Name+":\sql-exchange\"
 $installationdir="c:\install\"
 If(!(test-path $installationdir))
