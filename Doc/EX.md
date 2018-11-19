@@ -50,7 +50,11 @@ Dit zal de browers openen en surfen naar de localhost en daar zal het controlepa
 Nu zullen we ons verzendende connectors instellen, dit doen we door te navigeren naar volgend scherm foto 2.
 Volgende scherm komt op het scherm foto 3 hier moet he de naam intypen,klink vervolgenrs op volgende 
 Bij sit scherm zorg je er voor dat het MX-record aanstaat en je klikt terug op volgende
-Het daarop volgend scherm klik je op de plus foto 6 om uiteindlijk een * te typen en op nieuw op volgende te drukken (dit stelt dit dan we de mail gaan verzenden met s 
+Het daarop volgend scherm klik je op de plus foto 6 om uiteindlijk een * te typen en op nieuw op volgende te drukken (dit stelt dit dan we de mail gaan verzenden met smpt)
+
+Als je nu de mail zou verzenden zou hij moeten verzenden.
+
+In sommige gevallen zou je het ipadress waarvan je stuurt moeten deblokeren. hiervan zal je een mail krijgen en het zal ongeveer een halfuurtje duren vooraleer dit ge deblokeerd is
 
 
 
