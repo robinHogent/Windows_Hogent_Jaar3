@@ -22,3 +22,12 @@ cmd.exe /c "netsh routing ip nat install"
 cmd.exe /c "netsh routing ip nat add interface Ethernet"
 cmd.exe /c "netsh routing ip nat set interface Ethernet mode=full"
 cmd.exe /c "netsh routing ip nat add interface LAN"
+
+
+
+
+Get-Service adws,kdc,netlogon,dns
+Get-smbshare
+
+get-eventlog "Directory Service" | select entrytype, source, eventid, message
+get-eventlog "Active Directory Web Services" | select entrytype, source, eventid, messag
