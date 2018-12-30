@@ -40,14 +40,9 @@ Rename-Computer -NewName "DC3" -force
 if (Get-NetAdapter -Name "Ethernet") {
 Rename-NetAdapter -Name "Ethernet" -NewName "LAN"
 }
-
-
 #IP instellen
 New-NetIPAddress -InterfaceAlias "LAN" -IPAddress 192.168.1.3 -PrefixLength 24 -DefaultGateway 192.168.1.1
-
-
 Set-DnsClientServerAddress -InterfaceAlias LAN -ServerAddresses "192.168.1.1"
-
 $passwordAD= ConvertTo-SecureString "Robin1" -AsPlainText -force
 $credential = New-Object System.Management.Automation.PSCredential("robdec\administrator", $passwordAD)
 add-computer –domainname ROBDEC.gent -Credential $credential -restart –force
